@@ -1,0 +1,71 @@
+ls
+cd repogit
+git clone https://github.com/Juli1l/Repo_CantosJulieta_ArquitecturaEnSistema.git
+vagrant halt
+pwd
+ls
+cd repogit
+ls
+cd ..
+pwd
+ls
+cd repogit
+pwd
+ls
+cd ..
+pwd
+ssh-keygen -t ed25519
+ls -l
+ls -la
+cd .ssh
+ls -l
+cat id_ed25519.pub
+ls -l
+cd repogit
+ls -l
+vagrant status
+vagrant halt
+vagrant status
+vagrant reload
+cd repogit/TP_aySO/
+grep "model name" /proc/cpuinfo | tail -n1
+git add .
+git commit -m "feat: Añadiendo información de CPU"
+git status
+git push
+grep "model name" /proc/cpuinfo | tail -n1
+echo "modelo_cpu=$(grep 'model name' /proc/cpuinfo | tail -n1 | sed 's/^.*: //')" >> datos_usuario.txt
+git add datos_usuario.txt
+git commit -m "feat: Añadiendo información de CPU"
+git push
+cat datos_usuario.txt
+git status
+git log
+grep -v ':nologin' /etc/passwd
+grep -v ':nologin' /etc/passwd | sort -t: -k7
+grep -v ':nologin' /etc/passwd | sort -t: -k7 | head -n10
+grep -v ':nologin' /etc/passwd | sort -t: -k7 | head -n10 > lista_ordenada
+ls -l lista_ordenada
+cat lista_ordeanda
+cat lista_ordenada
+ls -l
+file lista_ordenada
+git add lista_ordenada
+git commit -m "ADD: Listado de usuarios ordenada"
+echo "tcpdump" > comando_dump_net
+echo "tcpdump -i eth0 -w dumpfile.pcap" >> comando_dump_net
+cat comando_dump_net
+git add comando_dump_net
+git commit -m "ADD: Comando para Capturar y analizar el tráfico de red"
+git log
+cat <<EOF >> README.md
+Alumno: <Cantos Julieta>
+División: <c311>
+Turno: <Noche>
+EOF
+
+cat README.md
+git add README.md
+git commit -m "Agregue información de alumna al README"
+git log
+history -a
